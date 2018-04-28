@@ -168,8 +168,8 @@ class Zend_View_Helper_PaginationControlTest extends PHPUnit\Framework\TestCase
      */
     public function testUsesPaginatorFromViewOnlyIfNoneSupplied()
     {
-        $this->_viewHelper->view->paginator  = $this->_paginator;
-        $paginator = Zend_Paginator::factory(range(1, 30));
+        $this->_viewHelper->view->paginator = $this->_paginator;
+        $paginator                          = Zend_Paginator::factory(range(1, 30));
         Zend_View_Helper_PaginationControl::setDefaultViewPartial('testPagination.phtml');
 
         $output = $this->_viewHelper->paginationControl($paginator);
@@ -190,5 +190,25 @@ class Zend_View_Helper_PaginationControlTest extends PHPUnit\Framework\TestCase
         }
 
         $this->assertContains('page count (11) equals pages in range (11)', $output, $output);
+    }
+
+    public function testRenders()
+    {
+        $this->expectException(Zend_View_Exception::class);
+        $this->expectExceptionMessage('No view partial provided and no default set');
+        $this->_paginator->render(new Zend_View());
+    }
+
+    public function testRendersWithPartial()
+    {
+        $view = new Zend_View();
+        $view->addBasePath(dirname(__FILE__) . '/_files');
+
+        Zend_View_Helper_PaginationControl::setDefaultViewPartial('partial.phtml');
+
+        $this->_paginator->setView($view);
+
+        $string = $this->_paginator->__toString();
+        $this->assertEquals('partial rendered successfully', $string);
     }
 }
