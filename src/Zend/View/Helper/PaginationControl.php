@@ -57,6 +57,7 @@ class Zend_View_Helper_PaginationControl
      * Sets the default view partial.
      *
      * @param string|array $partial View partial
+     * @return void
      */
     public static function setDefaultViewPartial($partial)
     {
