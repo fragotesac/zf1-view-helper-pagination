@@ -3,7 +3,7 @@ parameters:
     checkMissingIterableValueType: false
     paths:
         - ./
-    excludes_analyse:
+    excludePaths:
         - %rootDir%/../../../vendor/*
         - %rootDir%/../../../tests/*
     ignoreErrors:
