@@ -11,9 +11,9 @@
     "prefer-stable": true,
     "require": {
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-        "diablomedia/zendframework1-paginator": "^1.0.0",
-        "diablomedia/zendframework1-view": "^1.0.0",
-        "diablomedia/zendframework1-view-helper-partial": "^1.0.0"
+        "diablomedia/zendframework1-paginator": "^1.0.5",
+        "diablomedia/zendframework1-view": "^1.0.5",
+        "diablomedia/zendframework1-view-helper-partial": "^1.0.5"
     },
     "autoload": {
         "classmap": [
@@ -33,7 +33,7 @@
         "phpstan/phpstan": "1.10.67",
         "friendsofphp/php-cs-fixer": "3.54.0",
         "maglnet/composer-require-checker": "^3.0.0",
-        "phpro/grumphp-shim": "^1.5.0"
+        "phpro/grumphp-shim": "^2.0.0"
     },
     "archive": {
         "exclude": [
