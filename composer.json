@@ -1,5 +1,5 @@
 {
-    "name": "diablomedia/zendframework1-view-helper-paginationcontrol",
+    "name": "fragotesac/zf1-view-helper-paginationcontrol",
     "description": "Zend Framework 1 View_Helper_PaginationControl component",
     "type": "library",
     "keywords": [
@@ -11,9 +11,9 @@
     "prefer-stable": true,
     "require": {
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-        "diablomedia/zendframework1-paginator": "^1.0.5",
-        "diablomedia/zendframework1-view": "^1.0.5",
-        "diablomedia/zendframework1-view-helper-partial": "^1.0.5"
+        "fragotesac/zf1-paginator": "^1.0.5",
+        "fragotesac/zf1-view": "^1.0.5",
+        "fragotesac/zf1-view-helper-partial": "^1.0.5"
     },
     "autoload": {
         "classmap": [
